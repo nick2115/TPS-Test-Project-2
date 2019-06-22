@@ -1,0 +1,28 @@
+\chapter{Appendix \thechapter: Figures}\label{app:Figures}
+
+\renewcommand\numberline[1]{\hbox to 62pt{Figure #1:\hspace{1ex}}} % Add numbers and text to list of figures
+
+\vspace*{-2.5cm}
+\listofafigures
+
+\pagebreak
+
+Testing the referencing command for this appendix... Reference Appendix \ref{app:Figures}.
+
+Testing the reference to figure \ref{fig:tpslogo}
+
+\begin{afigure}[htb]
+    \centering
+    \includegraphics[width=0.4\columnwidth]{figures/usntps.png}
+    \caption{United States Naval Test Pilot School Emblem}
+    \label{fig:tpslogo}
+\end{afigure}
+
+\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% NOTE %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% Use \begin{afigure} and \end{afigure} for all figures that are included in the Appendix. This is to be able to generate a seperate list of figures.

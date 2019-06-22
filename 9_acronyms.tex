@@ -1,0 +1,39 @@
+%\usepackage[acronyms,nomain,toc,automake]{glossaries} %this is the proper preamble command
+%\makeglossaries also required in preamble
+
+\label{Acronyms}
+
+%============== Your acronyms here! ================%
+% \newacronym{reference}{Displayed}{Long description}
+
+\newacronym{ufc}{UFC}{Up Front Control}
+\newacronym{acm}{ACM}{Air Combat Manuevering}
+\newacronym{lol}{LOL}{laugh out loud}
+\newacronym{as}{A/S}{Air to Surface}
+
+% by default this will only print acronyms used in the document, this command will display all acronyms added in this file
+\glsaddall[types=\acronymtype]
+
+\newglossarystyle{mylistdotted}{\glossarystyle{listdotted}%
+   \renewenvironment{theglossary}{\begin{compactdesc}}{\end{compactdesc}}%
+   \renewcommand*{\glsgroupskip}{}}
+
+\begin{singlespacing}
+\printglossary[title={Acronyms and Abbreviations},type=\acronymtype, style=mylistdotted]
+\end{singlespacing}
+
+
+%================== How to use this ======================================
+%\gls command will display "<full> (<abbrv>)" of first use. On subsequent uses only the abbreviation will be displayed.
+
+%To reset the first use of an acronym, use the command:
+
+%\glsreset{<label>} or, if you want to reset the use status of all acronyms: \glsresetall 
+
+%Similarly, to unset the first use of an acronym so that only the abbreviation will be displayed, use: %\glsunset{<label>} or, for all acronyms:  \glsunsetall
+
+%\acrlong{ }  %Displays the phrase which the acronyms stands for. Put the label of the acronym inside the braces. In the example, \acrlong{gcd} prints Greatest Common Divisor.
+
+%\acrshort{ }  %Prints the acronym whose label is passed as parameter. For instance, \acrshort{gcd} renders as GCD.
+
+%\acrfull{ }  %Prints both, the acronym and its definition. In the example the output of \acrfull{lcm} is Least Common Multiple (LCM).
